@@ -82,7 +82,3 @@ The system generates two visualization files:
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
-
-## License
-
-[Your chosen license] 
