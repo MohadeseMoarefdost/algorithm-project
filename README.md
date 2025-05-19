@@ -1,74 +1,88 @@
-# algorithm-project
-# Request Management System using Binary Search Tree (BST) and MaxHeap
+# Request Management System
 
-## 📌 Project Description
-This project implements a **request management system** using two fundamental data structures:
-- **Binary Search Tree (BST)** – for storing user requests by unique ID and name.
-- **MaxHeap** – for prioritizing and processing requests based on priority values.
+A Python-based Request Management System that efficiently handles requests using a combination of Binary Search Tree (BST) and Max Heap data structures. The system provides a user-friendly interface for managing requests with different priorities.
 
-The system supports insertion, search, deletion, and processing of requests based on the highest priority.
+## Features
 
----
+- Add new requests with ID, name, and priority
+- Process highest priority requests automatically
+- Search requests by ID
+- Update request priorities
+- Delete requests
+- Visualize both BST and Max Heap structures
+- Print all requests in both BST and Heap formats
 
-## ⚙️ Data Structures Used
+## Data Structures Used
 
-### 🔹 Binary Search Tree (BST)
-Used to store requests by:
-- `ID` (unique identifier)
-- `Name` (user or task name)
+### Binary Search Tree (BST)
+- Efficient for searching and retrieving requests by ID
+- Maintains sorted order of requests
+- O(log n) average case for search, insert, and delete operations
 
-**Operations:**
-- `insertRequest(id, name)` – Inserts a new request into the BST.
-- `searchRequest(id)` – Searches for a request by its ID.
-- `deleteRequest(id)` – Deletes a request by ID.
-- `printBST()` – Prints the BST in Pre-order traversal.
-- `isEmptyBST()` – Checks if the BST is empty.
-- `sizeBST()` – Counts the number of nodes in the BST.
+### Max Heap
+- Efficient for managing request priorities
+- O(1) access to highest priority request
+- O(log n) for insert and delete operations
 
----
+## Requirements
 
-### 🔹 MaxHeap
-Used to manage request priorities based on:
-- `ID`
-- `Priority` (higher values have higher priority)
+- Python 3.x
+- Graphviz (for visualization)
 
-**Operations:**
-- `insertHeap(id, priority)` – Inserts a request into the MaxHeap.
-- `deleteMaxHeap()` – Removes the request with the highest priority.
-- `processHighestPriorityRequest()` – Processes and removes the top-priority request from both MaxHeap and BST.
-- `printMaxHeap()` – Prints MaxHeap in level-order traversal.
-- `maxHeapify(index)` – Rebuilds the heap from a given index.
-- `increasePriority(id, newPriority)` – Increases the priority of a specific request.
-- `isEmptyHeap()` – Checks if the MaxHeap is empty.
-- `sizeMaxHeap()` – Returns the number of elements in the MaxHeap.
+## Installation
 
----
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd [repository-name]
+```
 
-## 🔄 System Workflow
+2. Install required packages:
+```bash
+pip install graphviz
+```
 
-### 1. Insert Request:
-- Step 1: Store request ID and Name in BST.
-- Step 2: Store the same request with ID and Priority in MaxHeap.
+3. Install Graphviz:
+   - Windows: Download and install from [Graphviz website](https://graphviz.org/download/)
+   - Make sure to add Graphviz to your system's PATH
 
-### 2. Search & Delete:
-- You can search or delete any request using its ID from the BST.
-- Deletion from MaxHeap requires locating the index and using `maxHeapify` to maintain heap order.
+## Usage
 
-### 3. Process Requests by Priority:
-- The request with the highest priority is removed from the MaxHeap.
-- The corresponding request is also removed from the BST.
+Run the main program:
+```bash
+python main.py
+```
 
-### 4. Increase Request Priority:
-- You can increase the priority of a request using `increasePriority`.
-- The heap will be restructured using `maxHeapify`.
+### Menu Options
 
----
+1. Add new request
+2. Process highest priority request
+3. Search request by ID
+4. Update request priority
+5. Delete request
+6. Print all requests in BST
+7. Print all requests in Heap
+8. Visualize BST and Heap
+9. Exit
 
-## 🛠 Language & Tools
-- **Language:** Python
-- **Core Structures:** Separate classes for `BSTNode`, `HeapNode`, `BST`, and `MaxHeap`
-- Ideal for task queues, service systems, request tracking, etc.
+## Visualization
 
----
+The system generates two visualization files:
+- `bst_graph.png`: Visual representation of the Binary Search Tree
+- `heap_graph.png`: Visual representation of the Max Heap
 
-## 📁 Suggested Project Structure
+## Project Structure
+
+- `main.py`: Main program and user interface
+- `binarySearchTree.py`: BST implementation
+- `MaxHeap.py`: Max Heap implementation
+- `visualize.py`: Visualization utilities
+- `README.md`: Project documentation
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+[Your chosen license] 
